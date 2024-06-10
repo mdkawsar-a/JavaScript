@@ -14,7 +14,7 @@ const newString = game.substring( 3, 6 )
 // console.log(newString);
  
 const gameName = " Free Fire game"
-const gameNameToSlice = gameName.slice(-8, 4)
+// const gameNameToSlice = gameName.slice(-8, 4)
 // console.log(gameNameToSlice);
 
 // console.log(gameName.trim());
