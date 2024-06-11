@@ -15,4 +15,9 @@ const myArray2 = new Array(1, 2, 3, 4, 5)
 // myArray.unshift(9)
 // myArray.shift()
 
-console.log(myArray);
+// console.log(myArray.includes(5));
+// console.log(myArray.indexOf(1));
+
+// const newArr = myArray.join()
+// console.log(myArray);
+// console.log(typeof newArr);
