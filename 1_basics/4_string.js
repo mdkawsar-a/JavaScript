@@ -23,6 +23,6 @@ const url = "https://kawsar.com/kawsar%20choudhary"
 
 // console.log(url.replace('%20', '-'));
 
-// console.log(url.includes('sumi'));
+// console.log(url.includes('com'));
 
 console.log(gameName.split('-'));
