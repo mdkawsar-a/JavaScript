@@ -14,6 +14,10 @@ function sayMyname(){
 //     console.log(number1 + number2);
 // }
 
+// const result = addTwoNumbers(3, 7)
+
+// console.log(`Result: ${result}`); // result undefined
+
 function addTwoNumbers(number1, number2){
     
     // let result = number1 + number2
@@ -39,4 +43,31 @@ function culculateCartPrice(val1, val2, ...num1){
     return num1
 }
 
-console.log(culculateCartPrice(900, 200, 200, 300))
+// console.log(culculateCartPrice(900, 200, 200, 300))
+
+
+const user = {
+    username: "Kawsar",
+    price: 399
+}
+
+function handleObject(anyobject){
+    return `UserName is ${anyobject.username} and price is ${anyobject.price}`
+    
+}
+
+//  console.log(handleObject(user))
+//  handleObject({
+//     username: "kawsar",
+//     price: 499
+//  })
+
+
+const myArray = [100, 200, 300, 400]
+
+function returnArray(arrayValue){
+    return arrayValue[2]
+}
+
+// console.log(returnArray(myArray));
+console.log(returnArray([100, 200, 300, 400]));
