@@ -113,3 +113,9 @@ const course = {
 const {courseInstructor: instructor} = course
 
 // console.log(instructor);
+
+// {
+//     "name": "kawsar",
+//     "address": "chakchandira",
+//     "email": "kawsar@google.com"
+// }
