@@ -3,11 +3,15 @@
 
 //  console.log("Hello " + name + " Your age is " + age);
 
-// console.log(`Hello ${name} Your age is ${age}`);
+// console.log(`Hello ${name} Your age is ${age}`);  // Modern syntext  
 
 let game = new String("kawsar") 
 
-// console.log(game.indexOf('w'));
+// console.log(game.length);
+// console.log(game.toUpperCase());
+// console.log(game.charAt(3));
+// console.log(game.indexOf('s'));
+
 
 const newString = game.substring( 3, 6 )
  
