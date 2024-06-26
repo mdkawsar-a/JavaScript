@@ -11,7 +11,7 @@ const isLoggedIn = false
 
 const temperature = null
 
-let userEmail;
+let userEmail;     //undefined
 
 const id = Symbol("123")
 const anotherId = Symbol("123")
@@ -44,7 +44,7 @@ const myFunction = function(){
 
 // Stack (Primitive), Heap (Non-Primitive)
 
-let myYoutubeName = "kawsar"
+let myYoutubeName = "kawsar@youtube.com"
 
 let anotherName = myYoutubeName 
 
