@@ -39,6 +39,8 @@ jsUser.greetingTwo = function(){
 // console.log(jsUser.greetingTwo());
 
 
+
+
 // const tinderUser = new Object() // singleton object
 
 const tinderUser = {}        // Non singleton object

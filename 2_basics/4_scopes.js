@@ -44,6 +44,7 @@ function addOne(num){
     return num + 2
 }
 
+// addTwo(5) Error
 const addTwo = function(num){
     return num + 5
     
