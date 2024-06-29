@@ -28,3 +28,12 @@ map.set('AF', "Afghanistan")
 for (const [i, j] of map) {
     // console.log(i, "= ", j);
 }
+
+const myObj = {
+    book: "Holly Quran",
+    hadishBook: "Bokhari"
+}
+
+// for (const [key, value] of myObj) {
+//     console.log(key, value);
+// }
