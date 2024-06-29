@@ -36,4 +36,5 @@ const myObj = {
 
 // for (const [key, value] of myObj) {
 //     console.log(key, value);
+        // Not Iterable code
 // }
