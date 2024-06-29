@@ -106,7 +106,7 @@ const user = [
 
 const course = {
     coursename: "JavaScript",
-    price: "9000",
+    price: 9000,
     courseInstructor: "Kawsar"
 }
 
