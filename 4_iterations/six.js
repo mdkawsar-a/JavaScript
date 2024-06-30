@@ -11,8 +11,9 @@ const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // const numReturn = myNumbers.filter( (num) =>  num < 9 )
 const numReturn = myNumbers.filter( (num) =>  {
-    num < 9
+    return num < 9
 } )
+// console.log(numReturn);
 
 // const newNumbers = []
 
@@ -21,4 +22,4 @@ const numReturn = myNumbers.filter( (num) =>  {
 //         newNumbers.push(num)
 //     }
 // } )
-console.log(newNumbers);
+// console.log(newNumbers);
