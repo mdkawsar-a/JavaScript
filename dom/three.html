@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<style>
+    body{
+        background-color: #111;
+        color: #ddd
+    }
+</style>
+<body>
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "demo"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute('title', 'gererated title')
+    div.style.backgroundColor = "red"
+    div.style.padding = "10px"
+    // div.innerText = 'This is a div'
+    div.appendChild(document.createTextNode("This is a div"))
+
+    document.body.appendChild(div)
+</script>
+</html>
