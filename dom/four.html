@@ -25,6 +25,7 @@
     }
     addLanguage("Python")
     addLanguage("Typescript")
+    addLanguage("C++")
 
     function otherLanguage(langName){
         const li = document.createElement('li')
@@ -33,6 +34,22 @@
     }
     otherLanguage("Ruby")
     otherLanguage("Golang")
+    otherLanguage("Swift")
+
+    // Edit
+    const removeText = document.querySelector('.language :nth-child(2)')
+    // removeText.innerHTML = 'MOjo'
+    const newli = document.createElement('li')
+    newli.appendChild(document.createTextNode("Mojo"))
+    removeText.replaceWith(newli)
+
+    // edit
+    const secondLang = document.querySelector('li:first-child')
+    secondLang.outerHTML = "<li>kawsar</li>"
+
+    //remove
+    const removeLastLang = document.querySelector('li:last-child')
+    removeLastLang.remove()
 
 </script>
 </html>
