@@ -1,9 +1,11 @@
 # JavaScript projects related to dom
 
 # project link
-## [Click here] (https://stackblitz.com/edit/stackblitz-starters-tfhgrm?file=index.html)
+## [Click here](https://stackblitz.com/edit/stackblitz-starters-tfhgrm?file=index.html)
 
-# project 1 solution code
+# solution code
+
+# project 1
 
 ```Javascript
 
