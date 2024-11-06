@@ -95,7 +95,7 @@ setInterval(() => {
 ## Project 4
 
 ```javascript
-const randomNumber = parseInt(Math.random() * 100 + 1);
+let randomNumber = parseInt(Math.random() * 100 + 1);
 
 const submit = document.querySelector('#submit');
 const userInput = document.querySelector('#guessField');
@@ -151,7 +151,10 @@ function checkGuess(check) {
 
 function displayGuess(guess) {
   userInput.value = '';
-  guessSlot.innerHTML += `${guess} `;
+  guessSlot.innerHTML += `${guess}, `;
+  if (guessSlot !== '') {
+    guessSlot.style.backgroundColor = '#6c6d6d';
+  }
   numGuess++;
   remaining.innerHTML = `${11 - numGuess}`;
 }
@@ -161,11 +164,30 @@ function displayMessage(message) {
 }
 
 function endGame() {
-  //
+  userInput.value = '';
+  userInput.setAttribute('disabled', '');
+  playGame = false;
+  p.classList.add('button');
+  p.innerHTML = '<h2 id="newGame">Start new Game</h2>';
+  startOver.appendChild(p);
+  newGame();
 }
 
 function newGame() {
-  //
+  const startNewGame = document.querySelector('#newGame');
+  startNewGame.addEventListener('click', function (e) {
+    randomNumber = parseInt(Math.random() * 100 + 1);
+    prevGuess = [];
+    numGuess = 1;
+    remaining.innerHTML = `${11 - numGuess}`;
+    guessSlot.innerHTML = '';
+    guessSlot.style.backgroundColor = '';
+    lowOrHigh.innerHTML = '';
+    userInput.removeAttribute('disabled');
+    startOver.removeChild(p);
+    playGame = true;
+  });
 }
+
 
 ```
