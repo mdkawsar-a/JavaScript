@@ -79,3 +79,93 @@ form.addEventListener('submit', function (e) {
 });
 
 ```
+
+## Project 3
+
+```javascript
+const clock = document.querySelector('#clock');
+
+setInterval(() => {
+  const date = new Date();
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+```
+
+## Project 4
+
+```javascript
+const randomNumber = parseInt(Math.random() * 100 + 1);
+
+const submit = document.querySelector('#submit');
+const userInput = document.querySelector('#guessField');
+const guessSlot = document.querySelector('#prevGuesses');
+const remaining = document.querySelector('#remaining');
+const lowOrHigh = document.querySelector('#message');
+const startOver = document.querySelector('.guessParas');
+
+const p = document.createElement('p');
+
+let prevGuess = [];
+let numGuess = 1;
+let playGame = true;
+
+if (playGame) {
+  submit.addEventListener('click', function (e) {
+    e.preventDefault();
+    const guessValue = parseInt(userInput.value);
+    validateGuess(guessValue);
+  });
+}
+
+function validateGuess(valid) {
+  if (isNaN(valid)) {
+    alert(`Please enter a valid number`);
+  } else if (valid < 1) {
+    alert(`Please enter a number more than 1`);
+  } else if (valid > 100) {
+    alert(`Please enter a number less than 100`);
+  } else {
+    prevGuess.push(valid);
+    if (numGuess === 10) {
+      displayGuess(valid);
+      displayMessage(`Game Over. Random number was ${randomNumber}`);
+      endGame();
+    } else {
+      displayGuess(valid);
+      checkGuess(valid);
+    }
+  }
+}
+
+function checkGuess(check) {
+  if (check === randomNumber) {
+    displayMessage(`YOU guessed it right`);
+    endGame();
+  } else if (check < randomNumber) {
+    displayMessage(`Number is TOOO Low`);
+  } else if (check > randomNumber) {
+    displayMessage(`Number is TOOO High`);
+  }
+}
+
+function displayGuess(guess) {
+  userInput.value = '';
+  guessSlot.innerHTML += `${guess} `;
+  numGuess++;
+  remaining.innerHTML = `${11 - numGuess}`;
+}
+
+function displayMessage(message) {
+  lowOrHigh.innerHTML = `<h2>${message}</h2>`;
+}
+
+function endGame() {
+  //
+}
+
+function newGame() {
+  //
+}
+
+```
