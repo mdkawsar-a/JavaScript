@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+
+    <h1>Chai or JavaScript</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log("Kawsar", Date.now());
+
+    // },1000)
+
+    let clearTime
+    document.querySelector('#start').addEventListener('click', function (e) {
+        const sayDate = function (str) {
+            const date = new Date().toLocaleTimeString()
+            console.log(str, date);
+        }
+
+        clearTime = setInterval(sayDate, 1000, "Time is")
+
+    })
+
+    document.querySelector('#stop').addEventListener('click', function (e) {
+        clearInterval(clearTime)
+    })
+
+</script>
+
+</html>

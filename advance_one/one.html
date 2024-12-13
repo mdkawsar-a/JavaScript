@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg" alt="owl"></li>
+            <li><img width="200px" id="phone" src="https://images.pexels.com/photos/2641069/pexels-photo-2641069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="phone"></li>
+            <li><img width="200px" id="duck" src="https://images.pexels.com/photos/1144279/pexels-photo-1144279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="duck"></li>
+            <li><img width="200px" id="cat" src="https://images.pexels.com/photos/394621/pexels-photo-394621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="cat"></li>
+            <li><img width="200px" id="house" src="https://images.pexels.com/photos/574337/pexels-photo-574337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="house" onclick="alert('house')"></li>
+            <li><a style="color:aliceblue" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById("owl").onclick = function(){
+    //     alert('owl clicked')
+    // }
+    // attachEvent()
+    // jquery - on
+
+    // type, timeStamp, preventDefault
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+
+    // document.getElementById("images").addEventListener('click', function(e){
+    //     console.log('Click inside the ul');
+        
+    // }, false)
+
+    // document.getElementById("owl").addEventListener('click', function(e){
+    //     console.log('owl clicked');
+    //     // e.stopPropagation()
+    // }, false)
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     console.log('google clocked')
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    // },false)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === "IMG"){
+            console.log(e.target.id);
+            
+            let removeIt = e.target.parentNode 
+            removeIt.remove()
+            
+        }
+        
+        // removeIt.parentNode.removeChild(removeIt)
+    }, false)
+
+</script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            height: 70px;
+            width: 100px;
+            margin: 0 auto;
+            margin-top: 100px;
+
+        }
+
+        .img {
+            display: block;
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        p {
+            background-color: aliceblue;
+            color: #212121;
+            margin: 0px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body style="background-color: #212121; color:aliceblue">
+    Value State Description
+    0 UNSENT Client has been created. open() not called yet.
+    1 OPENED open() has been called.
+    2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+    3 LOADING Downloading; responseText holds partial data.
+    4 DONE The operation is complete.
+</body>
+<script>
+    const parentDiv = document.createElement('div')
+    parentDiv.className = "content"
+    const img = document.createElement('img')
+    img.className = "img"
+    const p = document.createElement('p')
+    parentDiv.appendChild(img)
+    parentDiv.appendChild(p)
+    document.body.appendChild(parentDiv)
+    const requestUrl = 'https://api.github.com/users/mdkawsar-a'
+    const xml = new XMLHttpRequest();
+    xml.open('GET', requestUrl)
+    xml.onreadystatechange = function () {
+        // console.log(xml.readyState)
+        if (xml.readyState === 4) {
+            // console.log(this.responseText);
+            const data = JSON.parse(this.responseText)
+            console.log(data);
+            img.setAttribute('src', `${data.avatar_url}`)
+            p.appendChild(document.createTextNode("Followers " + ` ${data.followers}`))
+        }
+    }
+    xml.send()
+</script>
+
+</html>
